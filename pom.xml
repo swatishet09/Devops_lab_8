@@ -29,6 +29,8 @@
 	</scm>
 	<properties>
 		<java.version>17</java.version>
+		<maven.compiler.src>17</maven.compiler.src>
+		<maven.compiler.target>17<maven.compiler.target>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -51,5 +53,20 @@
 			</plugin>
 		</plugins>
 	</build>
-
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.configuration</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.2.2</version>
+				<configuration>
+					<archieve>
+						<manifest>
+							<mainClass>com.example.demo</mainClass>
+						</manifest>
+					</archieve>
+				</configuration>
+			</plugin>
+		</plugins>	
+	</build>
 </project>
